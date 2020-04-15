@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    color: black;
+    font-family: 'times';
+
+}
+.section{
+    text-align: center;
+    margin-top:20px;
+    color: black;
+    font-family: 'times';
+    font-weight: bold;
+
+}
+
+.section span {
+    color: grey;
+}
+
+#btn{
+    width: 260px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'times';
+    background-color: grey;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 180px;
+    height: 25px;
+    margin-left:10px;
+    font-family: 'times';
+    font-size: 20px;
+  }
+
+#credits {
+    font-weight : 600;
+    letter-spacing: 2px;
+    text-align: center;
+}

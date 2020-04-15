@@ -1,0 +1,78 @@
+Bryan Bejarano
+Week #8 Part 2
+
+----------------------------------------------------------------------
+
+1. 
+-Asynchronous Javascript and XML
+
+2. 
+-Extensible Markup Language
+
+3. 
+-XMLHttpRequest 
+
+4. 
+-Able to increase the interactivity and usability of web pages.
+
+5. 
+-the event occurs on page
+-XMLHttpRequest object sends a request to the server
+-server sends response back to the web page
+-the response the server sent to the web page gets read by the JavaScript.
+-Then the JavaScript executes the page to update.
+
+6. 
+-XMLHttpRequest
+
+7. 
+-Used to exchange data with the web server. The exchangment of is called Asynchronously. Updating parts of the page instead of having the entire page refreshing.
+
+8. 
+-variable = new XMLHttpRequest();
+
+9. 
+-const xhttps = new XMLHttpRequest();
+
+10. 
+-XMLHttpRequest() it must be called before other method calls.
+
+11.
+-Live servers do not use http. Having https is a live server and is secured. 
+
+12. 
+-New Keyword
+
+13. 
+-To create an instance of the ArchiveTemp.
+ArchiveTemp() constructor function.
+
+14. 
+-Create an object from a constructor function
+-Sets the new object's internal, inaccessible, prototype propety to ber the constructor function's external, accessible prototype object.
+-Executes the constructor function. 
+-New keyword makes the keyword point to the newly created object. Constructor function refers to the function that follows the new keyword.
+-Returns if the function doesn't return its own object.
+
+15. 
+-XMLHttpRequest Object we have created with the value of new XMLHttpRequest() This creates a (new) instance of the XMLHttpRequest Object. Representing the XMLHttpRequest Object. 
+
+16.
+-XMLHttpRequest.open(): initializes a newly-created request, 
+or re-initializes an existing one.
+
+17.
+-xhttps.open("GET", url, true);
+
+18.
+-"GET" is the method (the value of the first parameter passed to open()) we are using. We are requesting to "GET" data from the OMDB Api.
+-url is the url we are sending our request.
+-true, we are making the request asynchronously.
+
+19.
+-xhttps.send();
+
+20.
+-Set the send() method on our xhttps object/variable.
+-send() immediately follows the call to open(), and is placed right below xhttps.send().
+-Nothing is passed in to it. 
