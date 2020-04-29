@@ -23,7 +23,7 @@ Week #8 Part 2
 -Then the JavaScript executes the page to update.
 
 6. 
--XMLHttpRequest
+-The core of AJAX is made up of XMLHttpRequest object. 
 
 7. 
 -The XMLHttpRequest object is used to exchange data with a web server asynchronously.   
