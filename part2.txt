@@ -13,7 +13,7 @@ Week #8 Part 2
 -XMLHttpRequest 
 
 4. 
--Able to increase the interactivity and usability of web pages.
+-AJAX allows the web page to make changes asynchronously, meaning it can update parts of the website without reloading the whole page. This is possible because AJAX exchanges data with the server behind the scenes. This better User Experience (UX). 
 
 5. 
 -the event occurs on page
@@ -26,7 +26,7 @@ Week #8 Part 2
 -XMLHttpRequest
 
 7. 
--Used to exchange data with the web server. The exchangment of is called Asynchronously. Updating parts of the page instead of having the entire page refreshing.
+-The XMLHttpRequest object is used to exchange data with a web server asynchronously.   
 
 8. 
 -variable = new XMLHttpRequest();
@@ -35,17 +35,18 @@ Week #8 Part 2
 -const xhttps = new XMLHttpRequest();
 
 10. 
--XMLHttpRequest() it must be called before other method calls.
+-XMLHttpRequest() constructor initializes an XMLHttpRequest() object. It  must be called before other method calls.
 
 11.
--Live servers do not use http. Having https is a live server and is secured. 
+-Live servers do not use http. Having https is a live server and is secured.
 
 12. 
--New Keyword
+-new Keyword
 
 13. 
 -To create an instance of the ArchiveTemp.
-ArchiveTemp() constructor function.
+ArchiveTemp() constructor function
+
 
 14. 
 -Create an object from a constructor function
@@ -55,7 +56,18 @@ ArchiveTemp() constructor function.
 -Returns if the function doesn't return its own object.
 
 15. 
--XMLHttpRequest Object we have created with the value of new XMLHttpRequest() This creates a (new) instance of the XMLHttpRequest Object. Representing the XMLHttpRequest Object. 
+xhttps.onreadystatechange = function () { 
+        if (this.readyState === 4 && this.status === 200) { 
+            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText));
+            const data = JSON.parse(this.responseText);
+            document.getElementById("movie-title").innerHTML = data.Title;
+            document.getElementById("poster").src = data.Poster;
+            document.getElementById("director").innerHTML = data.Director;
+            document.getElementById("writer").innerHTML = data.Writer; 
+            document.getElementById("genre").innerHTML = data.Genre;
+            document.getElementById("plot").innerHTML = data.Plot;
+        } 
 
 16.
 -XMLHttpRequest.open(): initializes a newly-created request, 
@@ -73,6 +85,7 @@ or re-initializes an existing one.
 -xhttps.send();
 
 20.
--Set the send() method on our xhttps object/variable.
--send() immediately follows the call to open(), and is placed right below xhttps.send().
--Nothing is passed in to it. 
+The send() method accepts any parameter which lets you specify the request's body.  
+If the request method is GET or HEAD, the body parameter is ignored, request body is null. 
+The body parameter is not ignored with requests like PUT, this request modified the body 
+content. GET/HEAD do not.
